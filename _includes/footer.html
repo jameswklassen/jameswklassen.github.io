@@ -1,0 +1,38 @@
+<footer>
+  <p>James Klassen 🇨🇦 <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p>
+  <ul class="controls">
+    <li><button aria-label="Decrease font size" id="decrease" onclick="decrease()">Aa</button></li>
+    <li><button aria-label="Increase font size" id="increase" onclick="increase()">Aa</button></li>
+  </ul>
+</footer>
+
+<script>
+  const DEFAULT_FONT_SIZE = 20;
+  const INCREMENT = 3;
+  const MIN_FONT_SIZE = 11;
+
+  document.querySelector("html").style.fontSize = `${localStorage.getItem("fontSize")}px`;
+
+  const currentFontsize = () => (
+    window.getComputedStyle(document.querySelector("html"), null).getPropertyValue('font-size')
+  );
+
+  const setHTMLFontSize = (amount) => {
+    localStorage.setItem("fontSize", amount);
+    document.querySelector("html").style.fontSize = `${amount}px`
+  }
+  
+  const modifyHTMLFontSize = (amount) => {
+    const newFontSize = Math.max(MIN_FONT_SIZE, parseInt(currentFontsize()) + amount);
+    setHTMLFontSize(newFontSize)
+  }
+  
+  function increase() {
+    modifyHTMLFontSize(INCREMENT);
+  }
+  function decrease() {
+    modifyHTMLFontSize(-1 * INCREMENT);
+  }
+  
+  
+  </script>

@@ -1,0 +1,51 @@
+<section class="company" {% if include.repeat %}aria-repeat{% endif %} aria-label="{{include.company}}" title="{{include.company}}">
+  <div class="header">
+    <div class="left">
+      {% unless include.repeat %}
+        <a
+          href="{{ include.url }}"
+          aria-label="{{ include.company}} logo"
+          target="_blank"
+          rel="noreferrer noopener"
+        > 
+          <div class="image">
+            <picture>
+              {% if include.dark-logo %}
+              <source
+                srcset="/assets/img/logos/{{include.slug | default: include.company | downcase}}-dark.png"
+                media="(prefers-color-scheme: dark)"
+              >
+              {% endif %}
+              <img
+                src="/assets/img/logos/{{include.slug | default: include.company | downcase}}.png"
+                alt="{{include.company}} logo"
+                draggable="false"
+              >
+            </picture>
+          </div>
+        </a>
+      {% endunless %}
+    </div>
+    <div class="content">
+      {% unless include.repeat %}
+        <h3 class="name">{{ include.company}}</h3>
+      {% endunless %}
+      <div class="position">
+        <span class="title">{{ include.position }}</span>
+        <span class="date">{{ include.time }}</span>
+      </div>
+      <div class="description">
+        {% if include.points %}
+          {% assign points = include.points | split: "|" %}
+          {% if points.size > 0 %}
+          <ul>
+            {% for point in points %}
+              <li>{{point | markdownify | remove: '<p>' | remove: '</p>'}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

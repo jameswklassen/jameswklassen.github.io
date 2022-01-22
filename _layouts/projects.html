@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul class="projects">
+  {% for project in site.projects reversed %}
+  <li class="item">
+    <a
+      href="{{project.url}}"
+      aria-label="{{project.title}}"
+    >
+      <div class="image">
+        <img
+          src="/assets/{{project.cover.image}}"
+          alt="{{project.cover.alt}}"
+          draggable="false"
+        />
+      </div>
+
+      <div class="content">
+        <span class="date">{{ project.date | date: "%Y"}}</span>
+        <span class="title">{{ project.title }}</span>
+        <span class="tags">
+          {{ project.tags | join: ", " }}
+        </span>
+        <span class="description">{{ project.summary }}</span>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

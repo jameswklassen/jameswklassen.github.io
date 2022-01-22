@@ -1,0 +1,44 @@
+title: James Klassen
+email_link: ma&#105;&#108;t&#111;&#58;j%61%6D%65s%40j&#97;&#37;&#54;D&#101;&#115;&#107;&#37;6Cass&#101;&#110;%2E%&#54;4&#101;v;
+email_full: <a href='ma&#105;&#108;t&#111;&#58;j%61%6D%65s%40j&#97;&#37;&#54;D&#101;&#115;&#107;&#37;6Cass&#101;&#110;%2E%&#54;4&#101;v'>j&#97;&#109;es&#64;ja&#109;&#101;sklas&#115;en&#46;&#100;&#101;v</a>
+description: >- # this means to ignore newlines until "baseurl:"
+  My name is James. I'm a senior software developer at Shopify.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jamesklassen.dev"
+twitter_username: jameswklassen
+github_username:  jameswklassen
+linkedin_username: james-klassen-b0a20b13a
+
+# Build settings
+sass:
+  sass_dir: _scss
+  style: :compressed
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:slug
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

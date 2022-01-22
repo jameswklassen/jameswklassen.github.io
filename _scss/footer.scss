@@ -1,0 +1,51 @@
+footer {
+  border-block-start: 1px solid var(--fg);
+  font-size: 0.8em;
+  padding: var(--padding);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  p {
+    margin: 0;
+  }
+
+  ul.controls {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.3rem;
+    
+
+    button {
+      color: var(--fg);
+      opacity: 0.6;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: unset;
+      --size: 1.5rem;
+      width: var(--size);
+      height: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &#increase {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      &#decrease {
+        font-weight: 500;
+        font-size: 0.7rem;
+      }
+      &:hover, &:focus-visible {
+        color: var(--theme);
+        opacity: 1;
+        box-shadow: 0 0 0 1px var(--fg), 2px 2px 0 2px var(--fg);
+      }
+    }
+  }
+}
