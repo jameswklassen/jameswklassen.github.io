@@ -1,0 +1,21 @@
+footer {
+  padding: var(--padding);
+  font-size: 0.8em;
+  margin-top: 30px;
+
+  ul {
+    opacity: 0.8;
+    list-style: none;
+    padding: 0;
+
+    a {
+      color: var(--fg);
+      padding: 3px;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}

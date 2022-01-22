@@ -1,0 +1,57 @@
+.posts,
+.projects {
+  list-style: none;
+  padding: 0;
+
+  .item {
+    display: block;
+
+    a {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      color: var(--fg);
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover, &:active, &:focus {
+        color: var(--theme);
+        border-radius: var(--border-radius-sm);
+        text-decoration: none;
+      }
+    }
+
+    .image {
+      flex: 1 1 150px;
+      margin: 10px;
+    }
+
+    .content {
+      flex: 1 1 60%;
+      margin: 10px;
+
+      .date {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 500;
+        opacity: 0.7;
+      }
+
+      .tags {
+        display: block;
+        font-size: 0.8em;
+        font-weight: 400;
+        opacity: 0.7;
+        margin-bottom: 5px;
+      }
+
+      .description {
+        font-weight: 350;
+        font-size: 0.8rem;
+        display: block;
+      }
+    }
+  }
+}

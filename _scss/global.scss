@@ -1,0 +1,43 @@
+html {
+  background: var(--bg);
+  font-size: 20px;
+}
+
+.d2l {
+  background-color: rgba($d2l, 0.2);
+}
+
+.shopify {
+  background-color: rgba($shopify, 0.2);
+}
+
+.bold {
+  background-color: rgba($bold, 0.2);
+}
+
+body {
+  color: var(--fg);
+  max-width: 720px;
+  margin: auto;
+}
+
+main {
+  position: relative;
+  margin: 15px 10px;
+
+  a {
+    $amt: 3px;
+    padding: $amt;
+    margin: -1 * $amt;
+    text-decoration: underline rgba(var(--theme-base), 0.4);
+  }
+
+  p, ul {
+    font-size: var(--font-size-body);
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+}

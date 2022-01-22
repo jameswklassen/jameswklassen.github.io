@@ -1,0 +1,14 @@
+<footer>
+  <p class="copyright">James Klassen &copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p>
+
+  <ul>
+    {% for node in site.pages %} {% if node.title %}
+    <li>
+      <a aria-label="{{ node.title }}" href="{{ node.url | prepend: node.baseurl }}" {% if page.url == node.url %}class="active"{% endif %}>
+        {{ node.title }}
+      </a>
+    </li>
+    {% endif %} {% endfor %}
+    <li><a href="{{ site.email_link }}">Contact</a></li>
+  </ul>
+</footer>

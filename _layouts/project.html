@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="project">
+  <span class="date">{{ page.date | date: "%B %Y"}}</span>
+  <span class="tags">{{ page.tags | join: ", " }}</span>
+  <img
+    src="/assets/{{page.cover.image}}"
+    alt="{{page.cover.alt}}"
+  />
+  {{ content }}
+</div>

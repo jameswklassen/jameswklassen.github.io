@@ -1,0 +1,48 @@
+header {
+  padding: var(--padding) 0;
+  
+  a {
+    color: var(--fg);
+    padding: 10px;
+    
+    h3 {
+      display: inline-block;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+
+      a {
+        display: flex;
+        font-weight: 500;
+        font-size: 0.9em;
+        border-radius: var(--border-radius-sm);
+        padding: 0.6rem;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      svg {
+        fill: var(--fg);
+        --header-icon-size: 1rem;
+        height: var(--header-icon-size);
+        width: var(--header-icon-size);
+      }
+    }
+  }
+}

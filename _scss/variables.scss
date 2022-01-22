@@ -1,0 +1,51 @@
+:root {
+    --color-white: #fff;
+    --color-grey-100: #fafafa;
+    --color-grey-200: #f0f0f0;
+    --color-grey-300: #cccccc;
+    --color-grey-600: #30363d;
+    --color-grey-800: #242424;
+    --color-grey-900: #110f0f;
+    --github: #a62ac9;
+    --linkedin: #2967bc;
+    --theme-base: 9, 110, 240;
+    --theme: rgb(var(--theme-base));
+
+    --font-size-body: 1.1rem;
+    --font-size-h1: 1.6em;
+    --font-size-h2: 1.4em;
+    --font-size-h3: 1.2em;
+    --font-size-h4: 1.1em;
+    
+    --padding: 15px;
+    --border-radius-sm: 5px;
+    --border-radius-lg: 8px;
+    --body-box-shadow: rgba(23, 24, 24, 0.05) 0px 0px 5px 0px, rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+    --logo-background-opacity: 0.2;
+    --position-background-opacity: 0.05;
+    --block-background-opacity: 0.17;
+    --border-opacity: 1 ;
+}
+
+$d2l: #494949;
+$shopify: #95bf47;
+$bold: #dc3726;
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --fg: var(--color-grey-800);
+        --bg: var(--color-white);
+        --bg-content: var(--color-white);
+        --border-color-content: var(--color-grey-200);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-base: 60, 150, 220;
+        --fg: #c5d1dd;
+        --bg: var(--color-grey-900);
+        --bg-content: var(--color-grey-800);
+        --border-color-content: var(--color-grey-600);
+    }
+}

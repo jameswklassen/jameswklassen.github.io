@@ -1,0 +1,160 @@
+section.company[aria-repeat] {
+  .header .content .position {    
+    border-radius: 0.3rem;
+  }
+}
+section.company {
+  .header {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .left {
+      width: 4rem;
+      display: flex;
+      
+      a {
+        border-radius: var(--border-radius-lg);
+        margin-inline-end: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+  
+        .image {
+          aspect-ratio: 1;
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          border-radius: var(--border-radius-lg);
+        }
+      }
+    }
+    
+    .content {
+      flex: 1 1 300px;
+      border-inline-start: 4px solid black;
+      padding-inline-start: 1rem;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 0;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      
+      &::before {
+        transform: translateX(-65%) translateY(-50%);
+        top: 0;
+      }
+      &::after {
+        transform: translateX(-65%) translateY(50%);
+        bottom: 0;
+      }
+      .name {
+        margin: 0;
+        padding-bottom: 0.1rem;
+        padding: 0.6rem;
+        border-radius: 0.3rem 0.3rem 0 0;
+      }
+
+      .position {
+        padding: 0.6rem;
+        border-radius: 0 0 0.3rem 0.3rem;
+
+
+        .title {
+          margin: 0;
+          margin-bottom: 0.4rem;
+          font-size: 1.05rem;
+          line-height: 1.1;
+        }
+        .date {
+          font-size: 0.8em;
+          opacity: 0.7;
+          margin: 0;
+          line-height: 1.1;
+        }
+      }
+      
+    }
+  }
+
+  .description {
+    & > p {
+      line-height: 1.5rem;
+      opacity: 0.9;
+      font-size: 1rem;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      padding-inline-start: 1rem;
+
+      li {
+        margin: 0.9rem 0;
+        font-size: 0.9rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &[title="D2L"] {
+    .position {
+      background-color: rgba($d2l, var(--position-background-opacity));
+    }
+    .name {
+      background-color: rgba($d2l, var(--block-background-opacity));
+    }
+    .content,
+    .name,
+    .position {
+      border-color: rgba($d2l, var(--border-opacity)) !important;
+    }
+    .content::before,
+    .content::after {
+      background-color: $d2l;
+    }
+  }
+  
+  &[title="Shopify"] {
+    .position {
+      background-color: rgba($shopify, var(--position-background-opacity));
+    }
+    .name {
+      background-color: rgba($shopify, var(--block-background-opacity));
+    }
+    .content,
+    .name,
+    .position {
+      border-color: rgba($shopify, var(--border-opacity)) !important;
+    }
+    .content::before,
+    .content::after {
+      background-color: $shopify;
+    }
+  }
+  
+  &[title="Bold Commerce"] {
+    .position {
+      background-color: rgba($bold, var(--position-background-opacity));
+    }
+    .name {
+      background-color: rgba($bold, var(--block-background-opacity));
+    }
+    .content,
+    .name,
+    .position {
+      border-color: rgba($bold, var(--border-opacity)) !important;
+    }
+    .content::before,
+    .content::after {
+      background-color: $bold;
+    }
+  }
+}
